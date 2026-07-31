@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Logbook</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap');
+
+  :root{
+    --paper: #E9ECE4;
+    --paper-card: #F4F5EF;
+    --ink: #212922;
+    --ink-soft: #57604F;
+    --teal: #2F6F62;
+    --mustard: #C1872B;
+    --rule: #C7CDBE;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px;}
+
+  header.masthead{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    border-bottom:3px solid var(--ink);
+    padding-bottom:20px;margin-bottom:36px;
+    gap:16px;
+  }
+  .masthead h1{
+    font-family:'Fraunces',serif;font-weight:600;font-size:2.4rem;margin:0;letter-spacing:-0.01em;
+  }
+  .masthead .kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-soft);
+  }
+
+  .stamp{
+    width:88px;height:88px;border:2px solid var(--teal);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    transform:rotate(-8deg);flex-shrink:0;
+    font-family:'IBM Plex Mono',monospace;font-size:0.6rem;color:var(--teal);
+    line-height:1.3;padding:6px;transition:transform .3s ease;
+  }
+  .stamp:hover{transform:rotate(0deg) scale(1.05);}
+  .stamp b{display:block;font-size:0.85rem;}
+
+  .entry{margin-bottom:44px;}
+  .entry-label{
+    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;
+    color:var(--mustard);text-transform:uppercase;margin-bottom:8px;display:block;
+  }
+  .entry h2{font-family:'Fraunces',serif;font-size:1.5rem;margin:0 0 12px;}
+  .entry p{color:var(--ink-soft);margin:0 0 12px;}
+
+  ul.log{list-style:none;padding:0;margin:0;}
+  ul.log li{
+    display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--rule);
+    font-family:'IBM Plex Mono',monospace;font-size:0.85rem;
+  }
+  ul.log li:last-child{border-bottom:none;}
+  ul.log li .tick{color:var(--teal);}
+
+  .empty-card{
+    border:1.5px dashed var(--rule);border-radius:6px;padding:24px;
+    color:var(--ink-soft);font-size:0.95rem;background:var(--paper-card);
+  }
+  .empty-card b{color:var(--ink);}
+
+  footer{
+    margin-top:56px;padding-top:20px;border-top:1px solid var(--rule);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+    font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--ink-soft);
+  }
+
+  a.social{color:var(--teal);text-decoration:none;border-bottom:1px solid currentColor;}
+
+  @media (prefers-reduced-motion: reduce){.stamp{transition:none;}}
+  @media (max-width:520px){
+    .masthead{flex-direction:column;gap:16px;}
+    .masthead h1{font-size:1.9rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div>
+      <span class="kicker">Personal Logbook · Est. 2026</span>
+      <h1>Your Name</h1>
+    </div>
+    <div class="stamp"><span><b>ENTRY</b>No. 001</span></div>
+  </header>
+
+  <section class="entry">
+    <span class="entry-label">01 · About</span>
+    <h2>Hi, I'm [Your Name].</h2>
+    <p>This is the first page of my own website — built to learn, and to have a small corner of the internet that's mine. I work in [your field or interest], and I'm using this site to track what I pick up along the way.</p>
+  </section>
+
+  <section class="entry">
+    <span class="entry-label">02 · Now Learning</span>
+    <h2>Currently in progress</h2>
+    <ul class="log">
+      <li><span class="tick">✓</span> Publishing my first website with GitHub Pages</li>
+      <li><span class="tick">○</span> Editing HTML &amp; CSS to make it my own</li>
+      <li><span class="tick">○</span> Adding a second page</li>
+    </ul>
+  </section>
+
+  <section class="entry">
+    <span class="entry-label">03 · Projects</span>
+    <h2>What I've built</h2>
+    <div class="empty-card">
+      <b>Nothing here yet — that's the point.</b><br>
+      As I finish small projects, I'll list them here. First entry goes above this line.
+    </div>
+  </section>
+
+  <footer>
+    <span>Built with HTML &amp; CSS</span>
+    <span><a class="social" href="mailto:you@example.com">you@example.com</a></span>
+  </footer>
+</div>
+</body>
+</html>
